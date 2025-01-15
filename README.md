@@ -1,22 +1,57 @@
 # Airlines-Analysis
 
-Overview
-This project is designed to predict airline passenger satisfaction using machine learning techniques. The analysis is performed using a Jupyter notebook, and the prediction model is deployed as a web application using Streamlit. The main goal is to provide insights into factors influencing passenger satisfaction and to deploy a model that allows real-time prediction based on user input.
+Airlines Passenger Satisfaction Prediction Application
+This Streamlit-based web application predicts airline passenger satisfaction using a trained machine learning model. It allows users to input their travel details, which the application processes using the loaded model to provide real-time satisfaction predictions.
 
-Project Structure
-Analysis (Jupyter Notebook)
-The Jupyter notebook contains the exploratory data analysis (EDA) and model building process. It includes data cleaning, feature engineering, and a detailed analysis to understand the impact of various factors on passenger satisfaction. Different machine learning models are trained and evaluated to find the best performer.
+Features
+Interactive Input Options: Customize your travel details using select boxes and sliders for gender, type of travel, class, and various service ratings.
+Real-time Predictions: Immediately receive a satisfaction prediction upon input submission.
+Visualization of Input Data: View your input data as you adjust the controls.
+Prerequisites
+Tools Required
+Python (3.8 or higher recommended)
+pip for installing dependencies
+Virtual environment tools (venv or conda)
+Installation Guide
+Step 1: Clone the Repository
+bash
+Copy code
+git clone <repository_url>
+cd <repository_name>
+Step 2: Create a Virtual Environment
+For Unix/MacOS
 
-Prediction Application (app.py)
-The Python file app.py uses Streamlit to create an interactive web application where users can input their travel details to predict satisfaction levels. The model used for predictions is loaded from a serialized file (Airlines_model.pkl).
+bash
+Copy code
+python3 -m venv venv
+source venv/bin/activate
+For Windows
 
-Key Features of the App
-Selection options for gender, type of travel, and class.
-Sliders to specify age, flight distance, and ratings for various services like wifi, food, and boarding.
-Real-time prediction of passenger satisfaction based on the input provided.
-How to Run the Application
-Clone the repository to your local machine.
-Ensure you have Python and Streamlit installed.
-Navigate to the directory containing app.py.
-Run the command streamlit run app.py in your terminal.
-The application will open in your web browser where you can start interacting with it.
+bash
+Copy code
+python -m venv venv
+venv\Scripts\Activate
+Step 3: Install Dependencies
+Install all required dependencies listed in requirements.txt.
+
+bash
+Copy code
+pip install -r requirements.txt
+Running the Application
+To start the Streamlit application, execute:
+
+bash
+Copy code
+streamlit run app.py
+This will launch the application in your default web browser. If it doesn’t open automatically, navigate to the URL shown in the terminal (usually http://localhost:8501).
+
+Usage Instructions
+Input Details: Use the interactive options to fill in your travel details.
+Submit for Prediction: Click the 'Predict' button to submit your details and view the prediction.
+View Prediction: The satisfaction level ('Satisfied' or 'Not Satisfied') will be displayed based on your input.
+Requirements
+Python Packages (from requirements.txt):
+streamlit
+pandas
+pickle5
+scikit-learn (if the model training process is included in the notebook)
